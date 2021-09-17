@@ -3,7 +3,6 @@
 $ python3 1.SWEET_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
 Argument | Variable | Description | Default value
 -------- | ---------| ----------- | -------------
-Argument|Variable|Description|Default value
 -h | help | Get help for any of the commands | NA
 -f | file | expression file | ./example/expression.txt
 -k | k | Balance parameter | 0.1
