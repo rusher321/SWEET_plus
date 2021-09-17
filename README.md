@@ -1,7 +1,7 @@
 # SWEEET
-1.SWEET_weight_calculating.py
+1.SWEET_sample__weight_calculating.py
 
-$ python3 1.SWEET_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
+$ python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
 
 Argument | Variable | Description | Default value
 ------------ | ------------- | ------------- | -------------
