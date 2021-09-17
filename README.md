@@ -8,3 +8,8 @@ Argument|Variable|Description|Default value
 -f | file | expression file | ./example/expression.txt
 -k | k | Balance parameter | 0.1
 -s | save | name of save file | ./example/weight.txt
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
