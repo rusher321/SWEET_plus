@@ -106,7 +106,7 @@ for l in patloc :
         wline.write("gene1\tgene2\tedge_weight\n")
         for l , g1 , v1 in zip(range(genelen),gene,value_s) :
             wline.write('\n'.join(g1+'\t'+g2+'\t'+str(v2) for g2,v2 in zip(gene[(l+1):],v1[(l+1):])))
-            
+            wline.write('\n')
         
 del value , agg , patloc , value_s , p , wline , weight , l , g1 , v1
 
