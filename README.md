@@ -33,3 +33,4 @@ Argument | Variable | Description | Default value
 -p | file_p | patient file | ./example/patient.txt
 -l | file_l | Patient edge weight file path | ./example
 -s | save | name of save file | ./example/mean_std.txt
+-z | zscore | calculate z-score or not | False
