@@ -1,36 +1,44 @@
 # SWEEET
-1.SWEET_sample_weight_calculating.py
+Here, we propose a sample-specific weighted correlation network (SWEET) method to model SINs by integrating the genome-wide sample weight with the differential correlation between the perturbed and aggregate networks.
 
-$ python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
+## Input File Formats
+- gene expression profile:
+    * column: patients(samples)
+    * row: genes
+- interest patients(samples): seperate with `\n`
+- interest genes: seperate with `\n`
 
-Argument | Variable | Description | Default value
------------- | ------------- | ------------- | -------------
--h | help | Get help for any of the commands | NA
--f | file | expression file | ./example/expression.txt
--k | k | Balance parameter | 0.1
--s | save | name of save file | ./example/weight.txt
+## Basic Usage
 
-2.SWEET_edge_weight_calculating.py
+To run step 1 for calculte sample weight:
+```
+python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
+```
 
-$ python3 2.SWEET_edge_weight_calculating.py -f ./example/expression.txt -w ./example/weight.txt -p ./example/patient.txt -g ./example/gene.txt -s ./example
+`-h`: Get help for any of the commands
+`-f`: Gene expression profile
+`-k`: Balance parameter
+`-s`: Output file name
 
-Argument | Variable | Description | Default value
------------- | ------------- | ------------- | -------------
--h | help | Get help for any of the commands | NA
--f | file_e | expression file | ./example/expression.txt
--w | file_w | weight file | ./example/weight.txt
--p | file_p | patient file | ./example/patient.txt
--g | file_g | gene file | ./example/gene.txt
--s | save_path | save path | ./example
+To calculate raw edge score between genes:
+```
+python3 2.SWEET_edge_weight_calculating.py -f ./example/expression.txt -w ./example/weight.txt -p ./example/patient.txt -g ./example/gene.txt -s ./example
+```
 
-3.SWEET_calculating_mean_std.py
+`-h`: Get help for any of the commands
+`-f`: Gene expression profile
+`-w`: Sample weight file from previous step
+`-p`: Patient file
+`-g`: Gene file
+`-s`: A path to output file
 
-$ python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -s ./example/mean_std.txt
+To calculate the statical significance:
+```
+python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -s ./example/mean_std.txt -z False
+```
 
-Argument | Variable | Description | Default value
------------- | ------------- | ------------- | -------------
--h | help | Get help for any of the commands | NA
--p | file_p | patient file | ./example/patient.txt
--l | file_l | Patient edge weight file path | ./example
--s | save | name of save file | ./example/mean_std.txt
--z | zscore | calculate z-score or not | False
+`-h`: Get help for any of the commands
+`-p`: Patient file
+`-l`: Patient raw edge weight file path from previous step
+`-s`: Output file name
+`-z`: Calculate z-score or not
