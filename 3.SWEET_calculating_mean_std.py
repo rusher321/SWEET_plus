@@ -50,9 +50,10 @@ if not os.path.exists(file):
 with open(f"{file_l}/{patlist[0]}.txt", mode='r') as rline:
     _ = rline.readline()
     for nline in rline:
-        g1, g2, v, *_ = nline.strip('\n').split('\t')
-        geneset.add(g1+'\t'+g2)
-        pair.append(v)
+        if nline != '\n':
+            val = nline.strip('\n').split('\t')
+            geneset.add(val[0]+'\t'+val[1])
+            pair.append(val[2])
 
 for p in patlist[1:]:
     file = f"{file_l}/{p}.txt"
@@ -62,10 +63,11 @@ for p in patlist[1:]:
     with open(f"{file_l}/{p}.txt", mode='r') as rline:
         _ = rline.readline()
         for nline in rline:
-            g1, g2, v, *_ = nline.strip('\n').split('\t')
-            if (g1+'\t'+g2) not in geneset:
-                print(f"patient {p} gene pairs not map to other")
-                pair.append(v)
+            if nline != '\n':
+                val = nline.strip('\n').split('\t')
+                if (val[0]+'\t'+val[1]) not in geneset:
+                    print(f"patient {p} gene pairs not map to other")
+                    pair.append(val[2])
 pair = np.array(pair)
 pair = check_file(pair)
 pair = pair.astype(float)
@@ -84,8 +86,9 @@ if calculate_z:
             _ = rline.readline()
             wline.write('gene1\tgene2\tz_score\n')
             for nline in rline:
-                g1, g2, v, *_ = nline.strip('\n').split('\t')
-                z = str(float(v)-vmean/vstd)
-                wline.write(f'{g1}\t{g2}\t{z}\n')
+                if nline != '\n':
+                    val = nline.strip('\n').split('\t')
+                    z = str(float(val[2])-vmean/vstd)
+                    wline.write(f'{val[0]}\t{val[1]}\t{z}\n')
 
 print("Finish")
