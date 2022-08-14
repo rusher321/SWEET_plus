@@ -8,6 +8,10 @@ Here, we propose a sample-specific weighted correlation network (SWEET) method t
 - interest patients(samples): seperate with `\n`
 - interest genes: seperate with `\n`
 
+## Dependencies
+The code is written in Python3. Additionally, the following package must also be installed:
+- Numpy
+
 ## Basic Usage
 
 To run step 1 for calculte sample weight:
