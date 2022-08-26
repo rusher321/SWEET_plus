@@ -1,12 +1,12 @@
 # SWEEET
-Here, we propose a sample-specific weighted correlation network (SWEET) method to model SINs by integrating the genome-wide sample weight with the differential correlation between the perturbed and aggregate networks.
+Sample-specific weighted correlation network (SWEET) method is desinged to model SINs by integrating the genome-wide sample weight with the differential correlation between the perturbed and aggregate networks.
 
 ## Input File Formats
-- gene expression profile:
-    * column: patients(samples)
-    * row: genes
-- interest patients(samples): seperate with `\n`
-- interest genes: seperate with `\n`
+- Gene expression profile (tab-delimited):
+    * Column: Samples
+    * Row: Genes
+- Samples of interest: seperate with `\n`
+- Genes of interest: seperate with `\n`
 
 ## Dependencies
 The code is written in Python3. Additionally, the following package must also be installed:
