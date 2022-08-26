@@ -46,3 +46,4 @@ python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -
 `-l`: Patient raw edge weight file path from previous step
 `-s`: Output file name
 `-z`: Calculate z-score or not
+
