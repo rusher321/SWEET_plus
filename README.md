@@ -13,7 +13,7 @@ The code is written in Python3. Additionally, the following package must also be
 - Numpy
 
 ## Basic Usage
-
+The example datasets are stored inside example folder, as well the example outputs.  
 Step 1: calculate genome-wide sample weight:
 ```
 python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
