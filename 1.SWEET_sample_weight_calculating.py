@@ -2,9 +2,9 @@ import argparse
 import numpy as np
 
 parser = argparse.ArgumentParser(description="Manual")
-parser.add_argument("-f", type=str , default="./example/expression.txt" , help="expression file")
+parser.add_argument("-f", type=str , default="./example/expression.txt" , help="A path to 'gene expression matrix' file")
 parser.add_argument("-k", type=float , default=0.1 , help="balance parameter")
-parser.add_argument("-s", type=str , default="./example/weight.txt" , help="name of save file")
+parser.add_argument("-s", type=str , default="./example/weight.txt" , help="A path to the output 'sample weight' file")
 
 args = parser.parse_args()
 file , k , save = args.f , args.k , args.s
