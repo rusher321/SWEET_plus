@@ -29,11 +29,11 @@ Step 2: calculate confidence scores of edges between given genes for each sample
 python3 2.SWEET_edge_weight_calculating.py -f ./example/expression.txt -w ./example/weight.txt -p ./example/patient.txt -g ./example/gene.txt -s ./example
 ```
 
-`-h`: Get help with the commands
-`-f`: A path to "gene expression matrix" file
-`-w`: A path to "sample weight" file (i.e., output file from step 1)
-`-p`: A path to "samples of interest" file
-`-g`: A path to "genes of interest" file
+`-h`: Get help with the commands  
+`-f`: A path to "gene expression matrix" file  
+`-w`: A path to "sample weight" file (i.e., output file from step 1)  
+`-p`: A path to "samples of interest" file  
+`-g`: A path to "genes of interest" file  
 `-s`: A path to the output "confidence scores of edges" files for each sample of interest
 
 Step 3: calculate the significance level of the confidence score for the edge between any two genes by a z-test:
@@ -41,9 +41,9 @@ Step 3: calculate the significance level of the confidence score for the edge be
 python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -s ./example/mean_std.txt -z False
 ```
 
-`-h`: Get help with the commands
-`-p`: A path to "samples of interest" file
-`-l`: A path to the "confidence scores of edges" files for each sample of interest (i.e., output files from step 2)
-`-s`: A path to the output file
-`-z`: Calculate z-score or not
+`-h`: Get help with the commands  
+`-p`: A path to "samples of interest" file  
+`-l`: A path to the "confidence scores of edges" files for each sample of interest (i.e., output files from step 2)  
+`-s`: A path to the output file  
+`-z`: Calculate z-score or not  
 
