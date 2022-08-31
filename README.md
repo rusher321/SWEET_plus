@@ -19,10 +19,10 @@ Step 1: calculate genome-wide sample weight:
 python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
 ```
 
-`-h`: Get help with the commands
-`-f`: A path to "gene expression matrix" file
-`-k`: Balance parameter
-`-s`: A path to the output "sample weight" file
+`-h`: Get help with the commands  
+`-f`: A path to "gene expression matrix" file  
+`-k`: Balance parameter  
+`-s`: A path to the output "sample weight" file  
 
 Step 2: calculate confidence scores of edges between given genes for each sample of interest:
 ```
