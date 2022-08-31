@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 16 20:16:36 2021
-
-@author: sean
-"""
-
-
 import argparse
 import numpy as np
 
