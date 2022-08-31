@@ -15,15 +15,15 @@ def check_file(expres):
 
 parser = argparse.ArgumentParser(description="Manual")
 parser.add_argument("-f", type=str, default="./example/expression.txt",
-                    help="expression file")  # expression profile
+                    help="A path to 'gene expression matrix' file")  # gene expression matrix
 parser.add_argument("-w", type=str, default="./example/weight.txt",
-                    help="weight file")  # weight profile
+                    help="A path to 'sample weight' file (i.e., the output file from step 1)")  # sample weight file
 parser.add_argument("-p", type=str, default="./example/patient.txt",
-                    help="patient file")  # patient file
+                    help="A path to 'samples of interest' file")  # samples of interest
 parser.add_argument("-g", type=str, default="./example/gene.txt",
-                    help="gene file")  # gene file
+                    help="A path to 'genes of interest' file")  # genes of interest
 parser.add_argument("-s", type=str, default="./example",
-                    help="save path")  # save path
+                    help="A path to the output 'confidence scores of edges' files for each sample of interest")  # output path
 
 args = parser.parse_args()
 file_e, file_w = args.f, args.w
