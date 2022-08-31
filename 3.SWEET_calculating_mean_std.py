@@ -21,7 +21,7 @@ parser.add_argument("-l", type=str, default="./example", help="A path to the 'co
 parser.add_argument(
     "-s", type=str, default="./example/mean_std.txt", help="A path to the output file(s)")
 parser.add_argument("-z", type=bool, default=False,
-                    help="Calculate z-score (Ture) or not (False)")
+                    help="Indicates whether the calculation of z score (Ture) or not (False)")
 
 args = parser.parse_args()
 file_p, file_l = args.p, (args.l).rstrip('/')
