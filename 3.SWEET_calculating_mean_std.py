@@ -16,12 +16,12 @@ def check_file(expres):
 
 parser = argparse.ArgumentParser(description="Manual")
 parser.add_argument(
-    "-p", type=str, default="./example/patient.txt", help="patient file")
-parser.add_argument("-l", type=str, default="./example", help="file path")
+    "-p", type=str, default="./example/patient.txt", help="A path to 'samples of interest' file")
+parser.add_argument("-l", type=str, default="./example", help="A path to the 'confidence scores of edges' file for each sample of interest (i.e., the output files from step 2)")
 parser.add_argument(
-    "-s", type=str, default="./example/mean_std.txt", help="name of save file")
+    "-s", type=str, default="./example/mean_std.txt", help="A path to the output file(s)")
 parser.add_argument("-z", type=bool, default=False,
-                    help="calculate z-score or not")
+                    help="Calculate z-score (Ture) or not (False)")
 
 args = parser.parse_args()
 file_p, file_l = args.p, (args.l).rstrip('/')
