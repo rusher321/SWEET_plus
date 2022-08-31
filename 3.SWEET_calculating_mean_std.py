@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 17 13:16:09 2021
-
-@author: sean
-"""
-
 import argparse
 import numpy as np
 import sys
