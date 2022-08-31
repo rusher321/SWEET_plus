@@ -31,7 +31,7 @@ python3 2.SWEET_edge_weight_calculating.py -f ./example/expression.txt -w ./exam
 
 `-h`: Get help with the commands  
 `-f`: A path to "gene expression matrix" file  
-`-w`: A path to "sample weight" file (i.e., output file from step 1)  
+`-w`: A path to "sample weight" file (i.e., the output file from step 1)  
 `-p`: A path to "samples of interest" file  
 `-g`: A path to "genes of interest" file  
 `-s`: A path to the output "confidence scores of edges" files for each sample of interest
@@ -43,7 +43,7 @@ python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -
 
 `-h`: Get help with the commands  
 `-p`: A path to "samples of interest" file  
-`-l`: A path to the "confidence scores of edges" files for each sample of interest (i.e., output files from step 2)  
+`-l`: A path to the "confidence scores of edges" file for each sample of interest (i.e., the output files from step 2)  
 `-s`: A path to the output file(s)  
 `-z`: Calculate z-score (Ture) or not (False)  
 
