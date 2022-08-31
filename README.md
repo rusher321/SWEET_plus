@@ -45,5 +45,5 @@ python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -
 `-p`: A path to "samples of interest" file  
 `-l`: A path to the "confidence scores of edges" file for each sample of interest (i.e., the output files from step 2)  
 `-s`: A path to the output file(s)  
-`-z`: Calculate z-score (Ture) or not (False)  
+`-z`: Indicates whether the calculation of z score (Ture) or not (False)  
 
