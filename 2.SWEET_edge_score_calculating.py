@@ -30,7 +30,7 @@ file_e, file_w = args.f, args.w
 file_p, file_g = args.p, args.g
 save_path = (args.s).rstrip('/')
 
-# open patient file
+# open 'samples of interest' file
 patset = set()
 with open(file_p, mode='r') as rline:
     for nline in rline:
@@ -38,10 +38,10 @@ with open(file_p, mode='r') as rline:
         patset.add(tem[0])
 del rline, nline, tem
 if not patset:
-    print("patient file doesn't have patients")
+    print("Warning! There is no sample ID in the 'samples of interest' file.")
     sys.exit()
 
-# open gene file
+# open 'genes of interest' file
 geneset = set()
 with open(file_g, mode='r') as rline:
     for nline in rline:
@@ -49,10 +49,10 @@ with open(file_g, mode='r') as rline:
         geneset.add(tem[0])
 del rline, nline, tem
 if not geneset:
-    print("gene file doesn't have genes")
+    print("Warning! There is no gene ID in the 'genes of interest' file.")
     sys.exit()
 
-# open weight file
+# open 'sample weight' file
 weight = {}
 with open(file_w, mode='r') as rline:
     _ = rline.readline()
@@ -61,10 +61,10 @@ with open(file_w, mode='r') as rline:
         weight.update({p: float(w)})
 del rline, nline, p, w, _
 if not weight:
-    print("weight file doesn't have pateint")
+    print("Warning! There is no sample ID in the 'sample weight' file.")
     sys.exit()
 
-# open expression file
+# open 'gene expression matrix' file
 gene, value = [], []
 with open(file_e, mode='r') as rline:
     pat = rline.readline().strip('\n').split('\t')[1:]
@@ -76,7 +76,7 @@ with open(file_e, mode='r') as rline:
 del rline, nline, g, v
 patlen, genelen = len(pat), len(gene)
 if (not patlen):
-    print("expression file are empty")
+    print("Warning! The 'gene expression matrix' file is empty")
     sys.exit()
 
 # check the pateints and genes in expression file
