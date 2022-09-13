@@ -9,7 +9,7 @@ def check_file(expres):
         loc = np.where(expres == c)
         if loc[0].size:
             expres[loc] = "0"
-            print(f"{c} in expres and transfer to 0")
+            print(f"Notice! There is {c} in the 'gene expression matrix' file and it will be assigned to 0.")
     return expres
 
 
