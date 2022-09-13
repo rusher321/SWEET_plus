@@ -79,13 +79,13 @@ if (not patlen):
     print("Warning! The 'gene expression matrix' file is empty")
     sys.exit()
 
-# check the pateints and genes in expression file
+# check the 'samples of interest' and 'genes of interest' in expression file
 patloc = [l for l, p in enumerate(pat) if p in patset]
 if (not genelen) or (len(patloc) != len(patset)):
-    print("expression file doesn't map to pateint or gene file")
+    print("Warning! The expression file cannot be mapped to 'samples of interest' or 'genes of interest' file")
     sys.exit()
 if len(set(pat) & weight.keys()) != patlen:
-    print("expression file doesn't map to weight file")
+    print("Warning! The sample ID(s) in the expression file cannot be mapped to 'sample weight' file")
     sys.exit()
 del patset, geneset
 print(f"patient : {len(patloc)}\ngene : {genelen}")
@@ -97,7 +97,7 @@ value = value.astype(float)
 loc = np.where(np.sum(value, axis=1) == 0)
 if len(loc[0]) != 0:
     tem = ','.join(str(i)for i in gene[loc])
-    print('Delete gene with 0 expression in all patients: '+tem)
+    print('Processing: delete gene(s) with zero expression values in all samples:'+tem)
     value = np.delete(value, loc, 0)
     gene = np.delete(gene, loc)
 
