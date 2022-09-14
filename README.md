@@ -38,7 +38,7 @@ python3 2.SWEET_edge_score_calculating.py -f ./example/expression.txt -w ./examp
 
 Step 3: calculate the significance level of the confidence score for the edge between any two genes by a z-test:
 ```
-python3 3.SWEET_calculating_mean_std.py -p ./example/patient.txt -l  ./example -s ./example/mean_std.txt -z False
+python3 3.SWEET_calculating_mean_std_zscore.py -p ./example/patient.txt -l  ./example -s ./example/mean_std.txt -z False
 ```
 
 `-h`: Get help with the commands  
