@@ -26,7 +26,7 @@ python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./ex
 
 Step 2: calculate confidence scores of edges between given genes for each sample of interest:
 ```
-python3 2.SWEET_edge_weight_calculating.py -f ./example/expression.txt -w ./example/weight.txt -p ./example/patient.txt -g ./example/gene.txt -s ./example
+python3 2.SWEET_edge_score_calculating.py -f ./example/expression.txt -w ./example/weight.txt -p ./example/patient.txt -g ./example/gene.txt -s ./example
 ```
 
 `-h`: Get help with the commands  
