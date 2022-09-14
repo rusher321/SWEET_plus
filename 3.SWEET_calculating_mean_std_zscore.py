@@ -60,7 +60,7 @@ for p in patlist[1:]:
                 val = nline.strip('\n').split('\t')
                 if (val[0]+'\t'+val[1]) not in geneset:
                     print(f"patient {p} gene pairs not map to other")
-                    pair.append(val[2])
+                pair.append(val[2])
 pair = np.array(pair)
 pair = check_file(pair)
 pair = pair.astype(float)

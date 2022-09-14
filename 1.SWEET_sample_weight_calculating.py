@@ -28,7 +28,7 @@ value = (value - rmin + 0.01)/dif
 value = value * k * patlen
 
 with open(save,mode='w') as w_line :
-    w_line.write('patient\tSample_weight\n')
+    w_line.write('patient\tsample_weight\n')
     for p,v in zip(pat,value) :
         tem = p + '\t' + str(v) + '\n'
         w_line.write(tem)

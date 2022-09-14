@@ -112,7 +112,7 @@ for l in patloc:
     value_s = np.corrcoef(value_s)
     value_s = weight[p] * (value_s - agg) + agg
     with open(f"{save_path}/{p}.txt", mode='w') as wline:
-        wline.write("gene1\tgene2\tRaw_edge_score\n")
+        wline.write("gene1\tgene2\traw_edge_score\n")
         for l, g1, v1 in zip(range(genelen), gene, value_s):
             wline.write('\n'.join(g1+'\t'+g2+'\t'+str(v2)
                         for g2, v2 in zip(gene[(l+1):], v1[(l+1):])))
