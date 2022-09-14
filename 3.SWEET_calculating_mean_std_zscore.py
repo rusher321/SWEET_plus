@@ -59,7 +59,7 @@ for p in patlist[1:]:
             if nline != '\n':
                 val = nline.strip('\n').split('\t')
                 if (val[0]+'\t'+val[1]) not in geneset:
-                    print(f"patient {p} gene pairs not map to other")
+                    print(f"Warning! In the sample {p}, there are gene pair(s) that cannot be found in the other samples.")
                 pair.append(val[2])
 pair = np.array(pair)
 pair = check_file(pair)
