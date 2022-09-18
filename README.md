@@ -47,3 +47,5 @@ python3 3.SWEET_calculating_mean_std_zscore.py -p ./example/patient.txt -l  ./ex
 `-s`: A path to the output file(s)  
 `-z`: Indicates whether the calculation of z score (Ture) or not (False)  
 
+Note that the mean and standard deviation are calculated by the confidence scores of all edges for the samples of interest; therefore, different lists of "samples of interest" will generate distinct means and standard deviations.
+
