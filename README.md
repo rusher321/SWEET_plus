@@ -1,4 +1,4 @@
-# SWEEET
+# SWEET
 Sample-specific weighted correlation network (SWEET) method is desinged to model SINs by integrating the genome-wide sample weight with the differential correlation between the perturbed and aggregate networks.
 
 ## Input File Formats
