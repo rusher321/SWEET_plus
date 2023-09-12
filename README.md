@@ -21,12 +21,12 @@ The code is written in Python3. Additionally, the following package must also be
 The example datasets are stored inside example folder, as well the example outputs.  
 Step 1: calculate genome-wide sample weight:
 
-*** raw method ***
+***raw method***
 ```
 python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./example/weight.txt
 ```
 
-*** use two matrix as the input and spearman correlation ***
+***use two matrix as the input and spearman correlation***
 ```
 python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -f2 ./example/expression2.txt -s ./test/weight.spearman -c spearman
 ```
@@ -41,11 +41,11 @@ python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -f2 ./e
 
 Step 2: calculate confidence scores of edges between given genes for each sample of interest:
 
-*** raw method ***
+***raw method***
 ```
 python3 2.SWEET_edge_score_calculating.py -f ./example/expression.txt -w ./example/weight.txt -p ./example/patient.txt -g ./example/gene.txt -s ./example
 ```
-*** use two matrix as the input and spearman correlation ***
+***use two matrix as the input and spearman correlation***
 ```
 python3 2.SWEET_edge_score_calculating.py -f ./example/expression.txt -f2 ./example/expression2.txt -w ./test/weight.spearman.mean.txt -p ./example/patient.txt -g ./example/gene.txt -c spearman -s ./test/
 ```
