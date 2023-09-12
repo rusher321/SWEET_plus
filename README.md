@@ -31,12 +31,12 @@ python3 1.SWEET_sample_weight_calculating.py -f ./example/expression.txt -s ./ex
 python3 1.SWEET_sample_weight_calculating.py -f ./example/mf_bacterime.txt -f2 ./example/mf_vrome.txt -s ./test2/weight.spearman -c spearman
 ```
   
-`-h`: --help  show this help message and exit
-`-f`: F        A path to 'gene expression matrix' or 'gene/species correlation matrix' file
-`-f2`: F2      A path to 'gene expression matrix2/species correlation matrix' file
-`-k`: K        balance parameter
-`-n`: N        network or expession matrix
-`-c`: C        correlation method [spearman/pearson]
+`-h`: --help  show this help message and exit  
+`-f`: F        A path to 'gene expression matrix' or 'gene/species correlation matrix' file  
+`-f2`: F2      A path to 'gene expression matrix2/species correlation matrix' file  
+`-k`: K        balance parameter  
+`-n`: N        network or expession matrix  
+`-c`: C        correlation method [spearman/pearson]  
 `-s`: S        A path to the output 'sample weight' file
 
 Step 2: calculate confidence scores of edges between given genes for each sample of interest:
@@ -50,14 +50,14 @@ python3 2.SWEET_edge_score_calculating.py -f ./example/expression.txt -w ./examp
 python3 2.SWEET_edge_score_calculating.py -f ./example/mf_bacterime.txt -f2 ./example/mf_vrome.txt -w ./test2/weight.spearman.mean.txt -p ./example/patient_mf.txt -g ./example/species.txt -c spearman -s ./test2/
 ```
 
-`-h`: --help  show this help message and exit
-`-f`: F        A path to 'gene expression matrix' file
-`-f2` F2      A path to 'gene expression matrix2/species correlation matrix' file
-`-w` W        A path to 'sample weight' file (i.e., the output file from step1)
-`-p` P        A path to 'samples of interest' file
-`-g` G        A path to 'genes of interest' file
-`-c` C        correlation method [spearman/pearson]
-`-s` S        A path to the output 'confidence scores of edges' files for each sample of interest
+`-h`: --help  show this help message and exit  
+`-f`: F A path to 'gene expression matrix' file  
+`-f2`: F2 A path to 'gene expression matrix2/species correlation matrix' file  
+`-w`: W A path to 'sample weight' file (i.e., the output file from step1)  
+`-p`: P A path to 'samples of interest' file  
+`-g`: G  A path to 'genes of interest' file  
+`-c`: C correlation method [spearman/pearson]  
+`-s`: S  A path to the output 'confidence scores of edges' files for each sample of interest
 
 Step 3: calculate the significance level of the confidence score for the edge between any two genes by a z-test:
 ```
