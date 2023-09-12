@@ -1,6 +1,6 @@
 # SWEET_plus
-Sample-specific weighted correlation network (SWEET) method is desinged to model SINs by integrating the genome-wide sample weight with the differential correlation between the perturbed and aggregate networks.
-SWEET_plus is an expanded version of SWEET for modeling SINs of two omics-data, eg. bacteria-virome or others. 
+**Sample-specific weighted correlation network (SWEET)** method is desinged to model SINs by integrating the genome-wide sample weight with the differential correlation between the perturbed and aggregate networks.
+**SWEET_plus** is an expanded version of SWEET for modeling SINs of two omics-data, eg. bacteria-virome or others. 
 
 ## Input File Formats
 - Gene expression matrix (tab-delimited):
