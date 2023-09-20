@@ -81,7 +81,7 @@ if calculate_z:
             for nline in rline:
                 if nline != '\n':
                     val = nline.strip('\n').split('\t')
-                    z = str(float(val[2])-vmean/vstd)
+                    z = str((float(val[2])-vmean)/vstd)
                     wline.write(f'{val[0]}\t{val[1]}\t{z}\n')
 
 print("Finish")
